@@ -1,4 +1,4 @@
-# $Rev: 3380 $, $Date: 2005-08-15 12:17:57 $
+# $Rev: 3380 $, $Date: 2005-08-27 17:42:47 $
 #
 Summary:	xdpyinfo application
 Summary(pl):	Aplikacja xdpyinfo
@@ -22,7 +22,7 @@ BuildRequires:	xorg-lib-libXxf86misc-devel
 BuildRequires:	xorg-lib-libXxf86vm-devel
 BuildRequires:	xorg-lib-libdmx-devel
 BuildRequires:	xorg-util-util-macros
-BuildRequires:	pkg-config
+BuildRequires:	pkgconfig >= 0.19
 BuildRoot:	%{tmpdir}/xdpyinfo-%{version}-root-%(id -u -n)
 
 %define		_prefix		/usr/X11R6

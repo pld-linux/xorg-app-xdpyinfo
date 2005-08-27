@@ -1,5 +1,3 @@
-# $Rev: 3380 $, $Date: 2005-08-27 17:42:47 $
-#
 Summary:	xdpyinfo application
 Summary(pl):	Aplikacja xdpyinfo
 Name:		xorg-app-xdpyinfo
@@ -23,10 +21,7 @@ BuildRequires:	xorg-lib-libXxf86vm-devel
 BuildRequires:	xorg-lib-libdmx-devel
 BuildRequires:	xorg-util-util-macros
 BuildRequires:	pkgconfig >= 0.19
-BuildRoot:	%{tmpdir}/xdpyinfo-%{version}-root-%(id -u -n)
-
-%define		_prefix		/usr/X11R6
-%define		_mandir		%{_prefix}/man
+BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
 xdpyinfo application.
@@ -34,10 +29,8 @@ xdpyinfo application.
 %description -l pl
 Aplikacja xdpyinfo.
 
-
 %prep
 %setup -q -n xdpyinfo-%{version}
-
 
 %build
 %{__aclocal}
@@ -48,17 +41,14 @@ Aplikacja xdpyinfo.
 
 %{__make}
 
-
 %install
 rm -rf $RPM_BUILD_ROOT
 
 %{__make} install \
 	DESTDIR=$RPM_BUILD_ROOT
 
-
 %clean
 rm -rf $RPM_BUILD_ROOT
-
 
 %files
 %defattr(644,root,root,755)

@@ -1,12 +1,12 @@
 Summary:	xdpyinfo application
 Summary(pl):	Aplikacja xdpyinfo
 Name:		xorg-app-xdpyinfo
-Version:	0.99.2
+Version:	1.0.1
 Release:	0.1
 License:	MIT
 Group:		X11/Applications
-Source0:	http://xorg.freedesktop.org/releases/X11R7.0-RC3/app/xdpyinfo-%{version}.tar.bz2
-# Source0-md5:	3bb5b7d3650fce39ab1911813cb0f012
+Source0:	http://xorg.freedesktop.org/releases/X11R7.0/src/app/xdpyinfo-%{version}.tar.bz2
+# Source0-md5:	84cc4798fe62c1d8c67c3f38e8158f70
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
@@ -52,6 +52,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc ChangeLog
+%doc COPYING ChangeLog
 %attr(755,root,root) %{_bindir}/*
 %{_mandir}/man1/*.1x*

@@ -1,5 +1,5 @@
 Summary:	xdpyinfo application
-Summary(pl):	Aplikacja xdpyinfo
+Summary(pl.UTF-8):   Aplikacja xdpyinfo
 Name:		xorg-app-xdpyinfo
 Version:	1.0.1
 Release:	1
@@ -27,7 +27,7 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 xdpyinfo application.
 
-%description -l pl
+%description -l pl.UTF-8
 Aplikacja xdpyinfo.
 
 %prep

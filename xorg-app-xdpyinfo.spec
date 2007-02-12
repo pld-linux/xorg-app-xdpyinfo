@@ -1,5 +1,5 @@
 Summary:	xdpyinfo application
-Summary(pl.UTF-8):   Aplikacja xdpyinfo
+Summary(pl.UTF-8):	Aplikacja xdpyinfo
 Name:		xorg-app-xdpyinfo
 Version:	1.0.1
 Release:	1

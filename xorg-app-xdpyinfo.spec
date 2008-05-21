@@ -1,12 +1,12 @@
 Summary:	xdpyinfo application
 Summary(pl.UTF-8):	Aplikacja xdpyinfo
 Name:		xorg-app-xdpyinfo
-Version:	1.0.2
+Version:	1.0.3
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xdpyinfo-%{version}.tar.bz2
-# Source0-md5:	c9ee60ae52c97c51d4ca327e53f0cb61
+# Source0-md5:	b7cbab6cbcd12bf7ad65dbc12d86e104
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake

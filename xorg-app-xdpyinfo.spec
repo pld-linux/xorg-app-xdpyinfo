@@ -1,16 +1,17 @@
-Summary:	xdpyinfo application
-Summary(pl.UTF-8):	Aplikacja xdpyinfo
+Summary:	xdpyinfo application - display information utility for X
+Summary(pl.UTF-8):	Aplikacja xdpyinfo - narzędzie do wyświetlania informacji dla X
 Name:		xorg-app-xdpyinfo
-Version:	1.0.3
+Version:	1.1.0
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xdpyinfo-%{version}.tar.bz2
-# Source0-md5:	b7cbab6cbcd12bf7ad65dbc12d86e104
+# Source0-md5:	d1d516610316138105cd07064b257c5c
 URL:		http://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.57
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
+BuildRequires:	xorg-lib-libXcomposite-devel
 BuildRequires:	xorg-lib-libXext-devel
 BuildRequires:	xorg-lib-libXi-devel
 BuildRequires:	xorg-lib-libXinerama-devel
@@ -21,14 +22,24 @@ BuildRequires:	xorg-lib-libXxf86dga-devel
 BuildRequires:	xorg-lib-libXxf86misc-devel
 BuildRequires:	xorg-lib-libXxf86vm-devel
 BuildRequires:	xorg-lib-libdmx-devel
-BuildRequires:	xorg-util-util-macros >= 0.99.2
+BuildRequires:	xorg-util-util-macros >= 1.3
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description
-xdpyinfo application.
+xdpyinfo is a utility for displaying information about an X server.
+
+It is used to examine the capabilities of a server, the predefined
+values for various parameters used in communicating between clients
+and the server, and the different types of screens, visuals, and X11
+protocol extensions that are available.
 
 %description -l pl.UTF-8
-Aplikacja xdpyinfo.
+xdpyinfo to narzędzie do wyświetlania informacji o serwerze X.
+
+Służy do sprawdzania możliwości serwera, predefiniowanych wartości
+różnych parametrów używanych w komunikacji między klientami a serwerem
+oraz dostępności różnych rodzajów ekranów, widoków i rozszerzeń
+protokołu X11.
 
 %prep
 %setup -q -n xdpyinfo-%{version}
@@ -53,6 +64,6 @@ rm -rf $RPM_BUILD_ROOT
 
 %files
 %defattr(644,root,root,755)
-%doc COPYING ChangeLog
+%doc COPYING ChangeLog README
 %attr(755,root,root) %{_bindir}/xdpyinfo
 %{_mandir}/man1/xdpyinfo.1x*

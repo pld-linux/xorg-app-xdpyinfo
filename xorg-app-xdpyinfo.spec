@@ -1,14 +1,14 @@
 Summary:	xdpyinfo application - display information utility for X
 Summary(pl.UTF-8):	Aplikacja xdpyinfo - narzędzie do wyświetlania informacji dla X
 Name:		xorg-app-xdpyinfo
-Version:	1.1.0
+Version:	1.2.0
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	http://xorg.freedesktop.org/releases/individual/app/xdpyinfo-%{version}.tar.bz2
-# Source0-md5:	d1d516610316138105cd07064b257c5c
+# Source0-md5:	c52fda7bbc80e74b7839f29298cb1d77
 URL:		http://xorg.freedesktop.org/
-BuildRequires:	autoconf >= 2.57
+BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
 BuildRequires:	pkgconfig >= 1:0.19
 BuildRequires:	xorg-lib-libXcomposite-devel
@@ -22,7 +22,7 @@ BuildRequires:	xorg-lib-libXxf86dga-devel
 BuildRequires:	xorg-lib-libXxf86misc-devel
 BuildRequires:	xorg-lib-libXxf86vm-devel
 BuildRequires:	xorg-lib-libdmx-devel
-BuildRequires:	xorg-util-util-macros >= 1.3
+BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 
 %description

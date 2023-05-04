@@ -1,12 +1,17 @@
+#
+# Conditional build:
+%bcond_without	dmx		# DMX support (xserver < 21)
+%bcond_with	xf86misc	# XF86-Misc extensions support (xserver < 1.6)
+
 Summary:	xdpyinfo application - display information utility for X
 Summary(pl.UTF-8):	Aplikacja xdpyinfo - narzędzie do wyświetlania informacji dla X
 Name:		xorg-app-xdpyinfo
-Version:	1.3.3
+Version:	1.3.4
 Release:	1
 License:	MIT
 Group:		X11/Applications
 Source0:	https://xorg.freedesktop.org/releases/individual/app/xdpyinfo-%{version}.tar.xz
-# Source0-md5:	f67116760888f2e06486ee3d179875d2
+# Source0-md5:	933e6d65f96c890f8e96a9f21094f0de
 URL:		https://xorg.freedesktop.org/
 BuildRequires:	autoconf >= 2.60
 BuildRequires:	automake
@@ -21,9 +26,9 @@ BuildRequires:	xorg-lib-libXinerama-devel
 BuildRequires:	xorg-lib-libXrender-devel
 BuildRequires:	xorg-lib-libXtst-devel
 BuildRequires:	xorg-lib-libXxf86dga-devel
-BuildRequires:	xorg-lib-libXxf86misc-devel
+%{?with_xf86misc:BuildRequires:	xorg-lib-libXxf86misc-devel}
 BuildRequires:	xorg-lib-libXxf86vm-devel
-BuildRequires:	xorg-lib-libdmx-devel
+%{?with_dmx:BuildRequires:	xorg-lib-libdmx-devel}
 BuildRequires:	xorg-proto-xproto-devel >= 7.0.22
 BuildRequires:	xorg-util-util-macros >= 1.8
 BuildRequires:	xz
@@ -54,7 +59,8 @@ protokołu X11.
 %{__autoheader}
 %{__automake}
 %configure \
-	--with-dmx
+	%{?with_dmx:--with-dmx} \
+	%{?with_xf86misc:--with-xf86misc}
 
 %{__make}
 
